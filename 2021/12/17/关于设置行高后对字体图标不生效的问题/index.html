@@ -6,22 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>高度塌陷问题 | 张文龙的个人网站 - Zhang WenLong&#39;s Personal Website</title>
+  <title>关于设置行高后对字体图标不生效的问题 | 张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浮动会脱离文档流，导致父元素高度塌陷">
+  <meta name="description" content="今天在写demo的时候遇到这样一个问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高度塌陷问题">
-<meta property="og:url" content="http://example.com/2021/12/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/index.html">
-<meta property="og:site_name" content="张文龙的个人网站 - Zhang WenLong&#39;s Personal Website">
-<meta property="og:description" content="浮动会脱离文档流，导致父元素高度塌陷">
+<meta property="og:title" content="关于设置行高后对字体图标不生效的问题">
+<meta property="og:url" content="http://example.com/2021/12/17/%E5%85%B3%E4%BA%8E%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E5%90%8E%E5%AF%B9%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog">
+<meta property="og:description" content="今天在写demo的时候遇到这样一个问题">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-16T14:27:13.000Z">
-<meta property="article:modified_time" content="2021-12-16T14:35:53.871Z">
+<meta property="og:image" content="http://example.com/img/postimg/2021121701.png">
+<meta property="og:image" content="http://example.com/img/postimg/2021121702.png">
+<meta property="article:published_time" content="2021-12-17T10:06:56.000Z">
+<meta property="article:modified_time" content="2021-12-17T12:14:41.259Z">
 <meta property="article:author" content="张文龙">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/postimg/2021121701.png">
   
-    <link rel="alternative" href="/atom.xml" title="张文龙的个人网站 - Zhang WenLong&#39;s Personal Website" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/bq.jpg">
@@ -159,37 +162,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-高度塌陷问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于设置行高后对字体图标不生效的问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      高度塌陷问题
+      关于设置行高后对字体图标不生效的问题
     </h1>
   
 
         
-        <a href="/2021/12/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-12-16T14:27:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-16</time>
+        <a href="/2021/12/17/%E5%85%B3%E4%BA%8E%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E5%90%8E%E5%AF%B9%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2021-12-17T10:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="浮动会脱离文档流，导致父元素高度塌陷"><a href="#浮动会脱离文档流，导致父元素高度塌陷" class="headerlink" title="浮动会脱离文档流，导致父元素高度塌陷"></a>浮动会脱离文档流，导致父元素高度塌陷</h4><span id="more"></span>
+        <p><strong>今天在写demo的时候遇到这样一个问题</strong></p>
+<span id="more"></span>
 
-<p>解决方法：</p>
-<p>添加BFC。</p>
-<p>11</p>
-<p>22</p>
-<p>33</p>
-<hr>
-<hr>
-<p>666</p>
-<p>测试测试————————————————————————————————</p>
+<p>在一个父元素中有两个子元素，一个是ul中放着四个li，靠左浮动 【图中的星星图标】；另一个是span元素的图标字体，靠右浮动【图中的微博图标】。</p>
+<left>
+    <img src="/img/postimg/2021121701.png" alt="问题图片" height="359px" width="254px"/>
+</left>
+
+<p>需求是要这两个元素<strong>垂直居中</strong>。</p>
+<p>那么直接给父元素设置一个line-height和height相同即可。但结果却是ul元素生效，span元素不生效。</p>
+<p>一开始以为是块元素和行内元素不同导致的，但通过多次复现发现并不是这个原因，在浮动之后无论是块元素还是行内元素的行高都会生效。</p>
+<p>最后发现：</p>
+<left>
+    <img src="/img/postimg/2021121702.png" alt="问题图片" height="332px" width="538px"/>
+</left>
+
+<p>span元素在被加上字体图标后，它自身也获得了line-height为1的值，而不再会去继承父元素的值，所以没有达到垂直居中的效果。【注：这里使用的是Font Awesome字体图标】</p>
+<p>解决的办法：给span设置line-height为none，或者给span外面再套一层。</p>
 
       
 
@@ -259,7 +269,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zwlHub.github.io/021/12/16/%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zwlHub.github.io/021/12/17/%E5%85%B3%E4%BA%8E%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E5%90%8E%E5%AF%B9%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,15 +283,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/12/17/%E3%80%8A%E8%AF%AF%E6%9D%80%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          《误杀》观后感
-        
-      </div>
-    </a>
   
+    <a href="/2021/12/17/%E3%80%8A%E8%AF%AF%E6%9D%80%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《误杀》观后感</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -306,7 +312,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8%E4%BC%9A%E8%84%B1%E7%A6%BB%E6%96%87%E6%A1%A3%E6%B5%81%EF%BC%8C%E5%AF%BC%E8%87%B4%E7%88%B6%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7"><span class="toc-number">1.</span> <span class="toc-text">浮动会脱离文档流，导致父元素高度塌陷</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -322,7 +328,7 @@
   
 
   
-  <div id="SOHUCS" sid="高度塌陷问题" ></div> 
+  <div id="SOHUCS" sid="关于设置行高后对字体图标不生效的问题" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

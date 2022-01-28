@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022 | 张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog</title>
+  <title>玩转组件 | 张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+  <meta name="description" content="关于前端组件的玩法什么是组件？组件是一个单独且可以复用的功能模块的封装。 一个组件包括开始标签和结束标签，标签上可以写属性，并对属性赋值，内容则写在两个标签之间。  根节点为,这个下只能且必须有一个根组件。 一个组件的data选项必须是一个函数  如果是uni-app工程，在根目录下的components目录中，创建符合”components&#x2F;组件名称&#x2F;组件名称.vue”目录结构的组件，easyc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转组件">
+<meta property="og:url" content="http://example.com/2022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog">
+<meta property="og:description" content="关于前端组件的玩法什么是组件？组件是一个单独且可以复用的功能模块的封装。 一个组件包括开始标签和结束标签，标签上可以写属性，并对属性赋值，内容则写在两个标签之间。  根节点为,这个下只能且必须有一个根组件。 一个组件的data选项必须是一个函数  如果是uni-app工程，在根目录下的components目录中，创建符合”components&#x2F;组件名称&#x2F;组件名称.vue”目录结构的组件，easyc">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-01-28T06:16:05.000Z">
+<meta property="article:modified_time" content="2022-01-28T08:11:32.972Z">
 <meta property="article:author" content="张文龙">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="张文龙的个人博客 - Zhang WenLong&#39;s Personal Blog" type="application/atom+xml">
@@ -154,36 +159,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-玩转组件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      玩转组件
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+
+        
+        <a href="/2022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/" class="archive-article-date">
   	<time datetime="2022-01-28T06:16:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/">玩转组件</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="关于前端组件的玩法"><a href="#关于前端组件的玩法" class="headerlink" title="关于前端组件的玩法"></a>关于前端组件的玩法</h5><h3 id="什么是组件？"><a href="#什么是组件？" class="headerlink" title="什么是组件？"></a>什么是组件？</h3><p>组件是一个单独且可以复用的功能模块的封装。</p>
+<p>一个组件包括开始标签和结束标签，标签上可以写属性，并对属性赋值，内容则写在两个标签之间。</p>
+<ul>
+<li>根节点为<template>,这个<template>下只能且必须有一个根<view>组件。</li>
+<li>一个组件的data选项必须是一个函数</li>
+</ul>
+<p>如果是uni-app工程，在根目录下的components目录中，创建符合”components/组件名称/组件名称.vue”目录结构的组件，easycom方式可直接使用组件。</p>
+<p>easycoom方式：在uniapp中将组件写在components目录下。</p>
+<h4 id="全局注册"><a href="#全局注册" class="headerlink" title="全局注册"></a>全局注册</h4><p>在main.js中进行全局注册，注册后就可以在所有页面使用该组件。</p>
+<ul>
+<li>Vue.component 的第一个参数必须是静态的字符串。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import pageHead from &#x27;./components/page-head.vue&#x27;</span><br><span class="line">Vue.component(&#x27;page-head&#x27;,pageHead)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h4 id="局部注册"><a href="#局部注册" class="headerlink" title="局部注册"></a>局部注册</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">    	&lt;uni-badge text=&quot;1&quot;&gt;&lt;/uni-badge&gt;&lt;!-- 3.使用组件 --&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">       import uniBadge from &#x27;@/components/uni-badge/uni-badge.vue&#x27;;//1.导入组件（这步属于传统vue规范，但在uni-app的easycom下可以省略这步）</span><br><span class="line">       export default &#123;</span><br><span class="line">           components:&#123;uniBadge &#125;//2.注册组件（这步属于传统vue规范，但在uni-app的easycom下可以省略这步） </span><br><span class="line">       &#125;</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="关于传值"><a href="#关于传值" class="headerlink" title="关于传值"></a>关于传值</h4><h4 id="props"><a href="#props" class="headerlink" title="props"></a>props</h4><p><code>props</code> 可以是数组或对象，用于接收来自父组件的数据<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/vue-components?id=props">https://uniapp.dcloud.io/vue-components?id=props</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;!-- 我是子组件componentA --&gt;</span><br><span class="line">        &lt;view&gt;&#123;&#123;age&#125;&#125;&lt;/view&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">            // 检测类型 + 其他验证</span><br><span class="line">            age: &#123;</span><br><span class="line">                type: Number,</span><br><span class="line">                default: 0,</span><br><span class="line">                required: true,</span><br><span class="line">                validator: function(value) &#123;</span><br><span class="line">                return value &gt;= 0</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;!-- 我是父组件 --&gt;</span><br><span class="line">        &lt;componentA :age=&quot;10&quot;&gt;&lt;/componentA&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,133 +219,134 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://zwlHub.github.io/022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/01/21/%E9%92%89%E9%92%89%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2022-01-21T09:58:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/21/%E9%92%89%E9%92%89%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">钉钉授权登录</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/21/%E9%92%89%E9%92%89%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95/">钉钉授权登录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8E%A9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">关于前端组件的玩法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%84%E4%BB%B6%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">什么是组件？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C"><span class="toc-number"></span> <span class="toc-text">全局注册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E6%B3%A8%E5%86%8C"><span class="toc-number"></span> <span class="toc-text">局部注册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BC%A0%E5%80%BC"><span class="toc-number"></span> <span class="toc-text">关于传值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#props"><span class="toc-number"></span> <span class="toc-text">props</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/01/19/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2022-01-19T01:17:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/19/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">hexo搭建博客相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/01/14/uniapp%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%9F%A5%E6%9B%B4%E6%96%B0/" class="archive-article-date">
-  	<time datetime="2022-01-14T01:19:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/01/14/uniapp%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%9F%A5%E6%9B%B4%E6%96%B0/">uniapp系统检查更新</a>
-    </h1>
+  <div id="SOHUCS" sid="玩转组件" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvOleAr5",
+        conf: "d657e0899014e30ad2aa3b1e12420769"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+
+<!-- 
+  
+ -->
 
 
           </div>
@@ -344,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

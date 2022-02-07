@@ -176,28 +176,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="关于前端组件的玩法"><a href="#关于前端组件的玩法" class="headerlink" title="关于前端组件的玩法"></a>关于前端组件的玩法</h5><h3 id="什么是组件？"><a href="#什么是组件？" class="headerlink" title="什么是组件？"></a>什么是组件？</h3><p>组件是一个单独且可以复用的功能模块的封装。</p>
-<p>一个组件包括开始标签和结束标签，标签上可以写属性，并对属性赋值，内容则写在两个标签之间。</p>
-<ul>
-<li>根节点为<template>,这个<template>下只能且必须有一个根<view>组件。</li>
-<li>一个组件的data选项必须是一个函数</li>
-</ul>
-<p>如果是uni-app工程，在根目录下的components目录中，创建符合”components/组件名称/组件名称.vue”目录结构的组件，easycom方式可直接使用组件。</p>
-<p>easycoom方式：在uniapp中将组件写在components目录下。</p>
-<h4 id="全局注册"><a href="#全局注册" class="headerlink" title="全局注册"></a>全局注册</h4><p>在main.js中进行全局注册，注册后就可以在所有页面使用该组件。</p>
-<ul>
-<li>Vue.component 的第一个参数必须是静态的字符串。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import pageHead from &#x27;./components/page-head.vue&#x27;</span><br><span class="line">Vue.component(&#x27;page-head&#x27;,pageHead)</span><br></pre></td></tr></table></figure>
-
-<h4 id="局部注册"><a href="#局部注册" class="headerlink" title="局部注册"></a>局部注册</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">    	&lt;uni-badge text=&quot;1&quot;&gt;&lt;/uni-badge&gt;&lt;!-- 3.使用组件 --&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">       import uniBadge from &#x27;@/components/uni-badge/uni-badge.vue&#x27;;//1.导入组件（这步属于传统vue规范，但在uni-app的easycom下可以省略这步）</span><br><span class="line">       export default &#123;</span><br><span class="line">           components:&#123;uniBadge &#125;//2.注册组件（这步属于传统vue规范，但在uni-app的easycom下可以省略这步） </span><br><span class="line">       &#125;</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="关于传值"><a href="#关于传值" class="headerlink" title="关于传值"></a>关于传值</h4><h4 id="props"><a href="#props" class="headerlink" title="props"></a>props</h4><p><code>props</code> 可以是数组或对象，用于接收来自父组件的数据<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/vue-components?id=props">https://uniapp.dcloud.io/vue-components?id=props</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;!-- 我是子组件componentA --&gt;</span><br><span class="line">        &lt;view&gt;&#123;&#123;age&#125;&#125;&lt;/view&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">            // 检测类型 + 其他验证</span><br><span class="line">            age: &#123;</span><br><span class="line">                type: Number,</span><br><span class="line">                default: 0,</span><br><span class="line">                required: true,</span><br><span class="line">                validator: function(value) &#123;</span><br><span class="line">                return value &gt;= 0</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;!-- 我是父组件 --&gt;</span><br><span class="line">        &lt;componentA :age=&quot;10&quot;&gt;&lt;/componentA&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-
-
+        <h5 id="关于前端组件的玩法"><a href="#关于前端组件的玩法" class="headerlink" title="关于前端组件的玩法"></a>关于前端组件的玩法</h5>
+        
+          <a class="article-more-a" href="/2022/01/28/%E7%8E%A9%E8%BD%AC%E7%BB%84%E4%BB%B6/#more">more >></a>
+        
       
 
       
